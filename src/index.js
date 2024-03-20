@@ -1,26 +1,30 @@
 import './styles.css';
 import project from './js/project.js';
+import allProjects from './js/projectContainer.js';
+import drawAllProjects from './js/drawAllProjects.js';
 
 const body = document.querySelector('body');
 body.classList.add('styleTest');
-let hey = document.createElement('div');
-hey.innerText = 'Hey';
-body.appendChild(hey);
 
-let bike = new project('Bike');
-bike.addTodo('Marko', 'Co ti povim?', '0', '0');
-bike.addTodo('Denis', 'Co ti povim?1', '0', '0');
-bike.addTodo('Marek', 'Co ti povim?2', '0', '0');
+let projects = new allProjects();
+projects.addProject('bike');
+projects.addProject('work');
 
-let work = new project('Work');
-work.addTodo('Marko', 'Co ti nepovim?', '0', '0');
-work.addTodo('Filip', 'Co ti nepovim?', '0', '0');
-work.addTodo('Fabo', 'Co ti nepovim?', '0', '0');
-work.addTodo('Sven', 'Co ti nepovim?', '0', '0');
 
-bike.listAllToDo();
-work.listAllToDo();
+projects.projectsArray[0].addTodo('Marko', 'Co ti povim?', '0', '0');
+projects.projectsArray[0].addTodo('Denis', 'Co ti povim?1', '0', '0');
+projects.projectsArray[0].addTodo('Marek', 'Co ti povim?2', '0', '0');
 
-console.log(bike.toDoList[0].title);
-bike.toDoList[0].title = 'Kokotko';
-console.log(bike.toDoList[0].title);
+projects.projectsArray[1].addTodo('Marko', 'Co ti nepovim?', '0', '0');
+projects.projectsArray[1].addTodo('Filip', 'Co ti nepovim?', '0', '0');
+projects.projectsArray[1].addTodo('Fabo', 'Co ti nepovim?', '0', '0');
+projects.projectsArray[1].addTodo('Sven', 'Co ti nepovim?', '0', '0');
+
+projects.projectsArray[0].listAllToDo();
+projects.projectsArray[1].listAllToDo();
+
+console.log(projects.projectsArray[0].toDoList[0].title);
+projects.projectsArray[0].toDoList[0].title = 'Kokotko';
+console.log(projects.projectsArray[0].toDoList[0].title);
+
+drawAllProjects(projects.projectsArray);

@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+.container > * {
+    border: 1px solid black;
+}
+
 .container {
     width: 100vw;
     height: 100vh;
@@ -19,4 +23,15 @@
 
 header {
     grid-column: 1 / 3;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav button {
+    padding: 10px;
+    margin: 5px;
 }
