@@ -1,6 +1,8 @@
 import allProjects from './projectContainer.js';
+import drawAllToDo from './drawAllToDo.js';
 
 export default function drawAllProjects(array) {
+    const main = document.querySelector('main');
     const nav = document.querySelector('nav');
     nav.replaceChildren();
     array.forEach(element => {
@@ -10,6 +12,10 @@ export default function drawAllProjects(array) {
         const projectButt = document.createElement('button');
         projectButt.innerText = element.name;
         projectButt.dataset.indexNumber = element.index;
+        projectButt.addEventListener('click', () => {
+            main.replaceChildren();
+            drawAllToDo(element.index);
+        })
         navRow.appendChild(projectButt);
         
         
