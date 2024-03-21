@@ -14,7 +14,7 @@ export default class project {
     }
 
     listAllToDo() {
-        console.log({...this.toDoList});
+        return [...this.toDoList];
     }
 
 }

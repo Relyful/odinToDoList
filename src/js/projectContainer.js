@@ -1,6 +1,6 @@
 import project from './project.js';
 
-export default class allProjects {
+class allProjects {
     projectsArray = [];
 
     addProject(name) {
@@ -12,3 +12,7 @@ export default class allProjects {
         this.projectsArray.splice(index, 1);
     }
 }
+
+let projectsContainer = new allProjects;
+
+export default projectsContainer;

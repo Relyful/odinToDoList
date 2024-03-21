@@ -15,6 +15,7 @@
 .container {
     width: 100vw;
     height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
 
     display: grid;
     grid-template-columns: 20% 80%;
@@ -23,6 +24,11 @@
 
 header {
     grid-column: 1 / 3;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
 }
 
 nav {
@@ -34,4 +40,24 @@ nav {
 nav button {
     padding: 10px;
     margin: 5px;
+}
+
+main {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 20rem);
+    grid-template-rows: 13rem;
+    grid-auto-rows: 13rem;
+    gap: 2rem;
+}
+
+.toDoCard {
+    padding: 0.5rem;
+    height: 13rem;
+    border-radius: 1rem;
+    border: solid black 1px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr;
 }
