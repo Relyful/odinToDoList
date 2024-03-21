@@ -30,4 +30,4 @@ console.log(projectContainer.projectsArray[0].toDoList[0].title);
 drawAllProjects(projectContainer.projectsArray);
 console.log(projectContainer.projectsArray[1].listAllToDo());
 
-drawAllToDo(projectContainer.projectsArray[1].listAllToDo())
+drawAllToDo(0)
