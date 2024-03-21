@@ -2,6 +2,7 @@ import './styles.css';
 import project from './js/project.js';
 import projectContainer from './js/projectContainer.js';
 import drawAllProjects from './js/drawAllProjects.js';
+import drawAllToDo from './js/drawAllToDo.js';
 
 const body = document.querySelector('body');
 body.classList.add('styleTest');
@@ -28,3 +29,5 @@ console.log(projectContainer.projectsArray[0].toDoList[0].title);
 
 drawAllProjects(projectContainer.projectsArray);
 console.log(projectContainer.projectsArray[1].listAllToDo());
+
+drawAllToDo(projectContainer.projectsArray[1].listAllToDo())
