@@ -4,8 +4,14 @@ import projectContainer from './js/projectContainer.js';
 import drawAllProjects from './js/drawAllProjects.js';
 import drawAllToDo from './js/drawAllToDo.js';
 
+const newProjectButton = document.querySelector('#newProjButt');
+const newProjDialog = document.querySelector('#newProject');
 const body = document.querySelector('body');
 body.classList.add('styleTest');
+
+newProjectButton.addEventListener('click', () => {
+    newProjDialog.showModal();
+})
 
 projectContainer.addProject('bike');
 projectContainer.addProject('work');

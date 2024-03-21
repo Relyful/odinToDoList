@@ -51,6 +51,18 @@ main {
     gap: 2rem;
 }
 
+#newProject {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+
+    padding: 4rem;
+}
+
+dialog#newProject::backdrop {
+    background-color: rgba(77, 77, 77, 0.623);
+}
+
 .toDoCard {
     padding: 0.5rem;
     height: 13rem;

@@ -3,7 +3,7 @@ import drawAllToDo from './drawAllToDo.js';
 
 export default function drawAllProjects(array) {
     const main = document.querySelector('main');
-    const nav = document.querySelector('nav');
+    const nav = document.querySelector('nav > .navContainer');
     nav.replaceChildren();
     array.forEach(element => {
         let navRow = document.createElement('div');
@@ -14,7 +14,7 @@ export default function drawAllProjects(array) {
         projectButt.dataset.indexNumber = element.index;
         projectButt.addEventListener('click', () => {
             main.replaceChildren();
-            drawAllToDo(element.index);
+            drawAllToDo(array.findIndex((e) => e.index == element.index));
         })
         navRow.appendChild(projectButt);
         
