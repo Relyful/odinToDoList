@@ -14,7 +14,7 @@ export default function drawAllProjects(array) {
         projectButt.dataset.indexNumber = element.index;
         projectButt.addEventListener('click', () => {
             main.replaceChildren();
-            drawAllToDo(array.findIndex((e) => e.index == element.index));
+            drawAllToDo(array.findIndex((e) => e.index === element.index));
         })
         navRow.appendChild(projectButt);
         
@@ -22,7 +22,8 @@ export default function drawAllProjects(array) {
         const deleteProjectButt = document.createElement('button');
         deleteProjectButt.addEventListener('click', () => {
             //find object where index is same as elements index and delete it
-            allProjects.deleteProject(array.findIndex((e) => e.index == element.index));            
+            allProjects.deleteProject(array.findIndex((e) => e.index === element.index));            
+            main.replaceChildren();
             drawAllProjects(allProjects.projectsArray);
         })
         navRow.appendChild(deleteProjectButt);
