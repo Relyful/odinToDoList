@@ -59,6 +59,12 @@ main {
     padding: 4rem;
 }
 
+#newProjCloseDialog {
+    position: absolute;
+    top: 5%;
+    left: 90%;
+}
+
 dialog#newProject::backdrop {
     background-color: rgba(77, 77, 77, 0.623);
 }

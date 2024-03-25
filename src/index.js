@@ -3,16 +3,14 @@ import project from './js/project.js';
 import projectContainer from './js/projectContainer.js';
 import drawAllProjects from './js/drawAllProjects.js';
 import drawAllToDo from './js/drawAllToDo.js';
+import newProjDialog from './js/newProjDialog.js';
 
-const newProjectButton = document.querySelector('#newProjButt');
-const newProjDialog = document.querySelector('#newProject');
 const body = document.querySelector('body');
 body.classList.add('styleTest');
 
-newProjectButton.addEventListener('click', () => {
-    newProjDialog.showModal();
-})
+newProjDialog();
 
+/////////////////////////////////////////////
 projectContainer.addProject('bike');
 projectContainer.addProject('work');
 
@@ -28,6 +26,7 @@ projectContainer.projectsArray[1].addTodo('Sven', 'Co ti nepovim?', '0', '0');
 
 projectContainer.projectsArray[0].listAllToDo();
 projectContainer.projectsArray[1].listAllToDo();
+////////////////////////////////////////////////
 
 console.log(projectContainer.projectsArray[0].toDoList[0].title);
 projectContainer.projectsArray[0].toDoList[0].title = 'Kokotko';

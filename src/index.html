@@ -19,11 +19,14 @@
         </main>
     </div>
     <dialog id="newProject">
-        <div class="newProjectRow">
-            <label for="proTitle">Projec Title: </label>
-            <input type="text" name="proTitle" id="proTitle">            
-        </div>
-        <button type="button">Submit</button>
+        <form action="#" method="get" id="newProjForm">
+            <div class="newProjectRow">
+                <label for="proTitle">Projec Title: </label>
+                <input type="text" name="proTitle" id="proTitle">
+            </div>
+            <button type="button">Submit</button>
+            <button type="button" id="newProjCloseDialog">❌</button>
+        </form>
     </dialog>
 </body>
 </html>
