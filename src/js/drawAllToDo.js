@@ -1,6 +1,8 @@
 import projectsContainer from "./projectContainer";
 import plusIMG from '../img/add_circle.svg';
 
+const newToDo = document.querySelector('#newToDo');
+
 export default function drawAllToDo(projectIndex) {
     let target = document.querySelector('main');
     const addNewButton = document.createElement('div');
@@ -10,7 +12,7 @@ export default function drawAllToDo(projectIndex) {
     addNewButton.classList.add('newTodoButton');
     addNewButton.appendChild(addNewImage);
     addNewButton.addEventListener('click', (e) => {
-        console.log(e);
+        newToDo.showModal();
     })
     target.appendChild(addNewButton);
 

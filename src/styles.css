@@ -65,10 +65,41 @@ main {
     left: 90%;
 }
 
+#newToDo {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+
+    width: 30%;
+    height: 35%;
+    padding: 2%;
+
+    overflow: auto;
+}
+
+.toDoRow {
+    width: 100%;
+    margin-bottom: 2%;
+    display: flex;
+}
+
+.toDoRow > label {
+    width: 7em;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#toDoFormSubmit {
+    margin-top: 5%;
+    margin-left: 15%;
+    padding: 7px;
+}
+
 .newTodoButton {
     border: solid 1px black;
     height: 13rem;
     border-radius: 1rem;
+    cursor: pointer;
 
     display: flex;
     justify-content: center;
@@ -78,7 +109,6 @@ main {
 .plusIMG {
     width: 50%;
     height: 50%;
-    cursor: pointer;
 }
 
 dialog#newProject::backdrop {
@@ -95,4 +125,9 @@ dialog#newProject::backdrop {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 3fr 1fr;
+}
+
+.cardTitle, .cardDate {
+    display: flex;
+    align-items: center;
 }
