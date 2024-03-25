@@ -1,7 +1,8 @@
 import allProjects from './projectContainer.js';
 import drawAllToDo from './drawAllToDo.js';
+import projectsContainer from './projectContainer.js';
 
-export default function drawAllProjects(array) {
+export default function drawAllProjects(array = projectsContainer.projectsArray) {
     const main = document.querySelector('main');
     const nav = document.querySelector('nav > .navContainer');
     nav.replaceChildren();

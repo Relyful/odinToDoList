@@ -15,7 +15,7 @@ export default function() {
         const newProjTitleInput = document.querySelector('#proTitle').value;
         projectContainer.addProject(newProjTitleInput);
         document.querySelector('#newProjForm').reset();
-        drawAllProjects(projectContainer.projectsArray);
+        drawAllProjects();
         newProjDialog.close();
     })
     

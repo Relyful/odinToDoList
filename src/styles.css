@@ -65,6 +65,22 @@ main {
     left: 90%;
 }
 
+.newTodoButton {
+    border: solid 1px black;
+    height: 13rem;
+    border-radius: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plusIMG {
+    width: 50%;
+    height: 50%;
+    cursor: pointer;
+}
+
 dialog#newProject::backdrop {
     background-color: rgba(77, 77, 77, 0.623);
 }
@@ -74,6 +90,7 @@ dialog#newProject::backdrop {
     height: 13rem;
     border-radius: 1rem;
     border: solid black 1px;
+    cursor: pointer;
 
     display: grid;
     grid-template-columns: 1fr;

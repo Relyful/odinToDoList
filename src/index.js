@@ -32,7 +32,7 @@ console.log(projectContainer.projectsArray[0].toDoList[0].title);
 projectContainer.projectsArray[0].toDoList[0].title = 'Kokotko';
 console.log(projectContainer.projectsArray[0].toDoList[0].title);
 
-drawAllProjects(projectContainer.projectsArray);
+drawAllProjects();
 console.log(projectContainer.projectsArray[1].listAllToDo());
 
-drawAllToDo(0)
+drawAllToDo(0);
