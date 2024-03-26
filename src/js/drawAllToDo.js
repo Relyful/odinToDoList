@@ -21,6 +21,7 @@ export default function drawAllToDo(projectIndex) {
         submitButton.textContent = 'Submit';
         submitButton.type = 'button';
         submitButton.id = 'toDoFormSubmit';
+        toDoRowButton.replaceChildren();
         toDoRowButton.appendChild(submitButton);
         newToDoDialog();
         newToDo.showModal();
