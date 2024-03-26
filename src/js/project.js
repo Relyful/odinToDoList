@@ -13,6 +13,18 @@ export default class project {
         this.toDoList.push(newToDo);
     }
 
+    editToDo(index, title, description, dueDate, priority) {
+        const toDo = this.toDoList[index];
+        toDo.title = title;
+        toDo.description = description;
+        toDo.dueDate = dueDate;
+        toDo.priority = priority;
+    }
+
+    deleteToDo(index) {
+        this.toDoList.splice(index, 1);
+    }
+
     listAllToDo() {
         return [...this.toDoList];
     }
