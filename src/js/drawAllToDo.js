@@ -30,6 +30,7 @@ export default function drawAllToDo(projectIndex) {
 
     projectsContainer.projectsArray[projectIndex].listAllToDo().forEach(element => {
         const newCard = document.createElement('div');
+        newCard.dataset.toDoIndex = element.index;        
         newCard.classList.add('toDoCard');
         let cardTitle = document.createElement('div');
         cardTitle.classList.add('cardTitle');
