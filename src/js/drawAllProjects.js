@@ -1,7 +1,6 @@
 import allProjects from './projectContainer.js';
 import drawAllToDo from './drawAllToDo.js';
 import projectsContainer from './projectContainer.js';
-import newToDoDialog from "./newToDoDialog";
 
 export default function drawAllProjects(array = projectsContainer.projectsArray) {
     const main = document.querySelector('main');

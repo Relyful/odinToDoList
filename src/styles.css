@@ -59,7 +59,7 @@ main {
     padding: 4rem;
 }
 
-#newProjCloseDialog {
+#newProjCloseDialog, #newToDoCloseDialog {
     position: absolute;
     top: 5%;
     left: 90%;
@@ -69,10 +69,9 @@ main {
     position: absolute;
     top: 40%;
     left: 40%;
+    padding: 3rem;
 
-    width: 30%;
-    height: 35%;
-    padding: 2%;
+    
 
     overflow: auto;
 }
