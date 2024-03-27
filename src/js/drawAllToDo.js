@@ -2,6 +2,7 @@ import projectsContainer from "./projectContainer";
 import plusIMG from '../img/add_circle.svg';
 import newToDoDialog from "./newToDoDialog";
 import editToDoDialog from "./editToDoDialog";
+import { format } from "date-fns";
 
 const newToDo = document.querySelector('#newToDo');
 const toDoRowButton = document.querySelector('#toDoRowButton');
@@ -37,6 +38,7 @@ export default function drawAllToDo(projectIndex) {
     
 
     projectsContainer.projectsArray[projectIndex].listAllToDo().forEach(element => {
+        let formatDate = format(new Date(element.dueDate), "dd-MM-yyyy");
         const newCard = document.createElement('div');        
         newCard.dataset.toDoIndex = element.index;        
         newCard.classList.add('toDoCard');
@@ -45,7 +47,7 @@ export default function drawAllToDo(projectIndex) {
         cardTitle.innerText = element.title;
         let cardDate = document.createElement('div');
         cardDate.classList.add('cardDate');
-        cardDate.innerText = element.dueDate;
+        cardDate.innerText = formatDate;
 
         newCard.addEventListener('click', (e) => {
             newToDoForm.reset();

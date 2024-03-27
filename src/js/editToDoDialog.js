@@ -1,5 +1,6 @@
 import projectsContainer from "./projectContainer";
 import drawAllToDo from "./drawAllToDo";
+import { format } from "date-fns"; 
 
 const toDoRowButton = document.querySelector('#toDoRowButton');
 const newToDoCloseDialog = document.querySelector('#newToDoCloseDialog');
@@ -20,7 +21,8 @@ export default function() {
         let thisProjectArray = projectsContainer.projectsArray[thisProjectIndex].listAllToDo();
         let realToDoIndex = thisProjectArray.findIndex(element => element.index == thisToDoIndex);
         console.log({realToDoIndex, thisToDoIndex, thisProjectIndex});
-        projectsContainer.projectsArray[thisProjectIndex].editToDo(realToDoIndex, toDoTitle.value, toDoDescription.value, toDoDate.value, toDoPriority.value);
+
+        projectsContainer.projectsArray[thisProjectIndex].editToDo(realToDoIndex, toDoTitle.value, toDoDescription.value, toDoDate.value , toDoPriority.value);
         console.log(projectsContainer.projectsArray[thisProjectIndex]);
         drawAllToDo(thisProjectIndex);
         newToDoForm.reset();
