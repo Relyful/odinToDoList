@@ -36,7 +36,12 @@ function loadToDosFromStorage() {
         let parsedToDos = JSON.parse(localStorage.getItem("parsedToDos"));        
 
         parsedToDos.forEach( element => {
-            projectsContainer.projectsArray[element.projectIndex].addToDo(element.title, element.description, element.dueDate, element.priority);
+            if (projectsContainer.projectsArray[element.projectIndex]) {
+                projectsContainer.projectsArray[element.projectIndex].addToDo(element.title, element.description, element.dueDate, element.priority);
+            }
+            else {
+                console.log('Lost ToDo Cleared');
+            }            
         })
         console.log('Loaded todos from localStorage :)');
     }

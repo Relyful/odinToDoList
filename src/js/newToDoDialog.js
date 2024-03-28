@@ -15,7 +15,14 @@ export default function() {
     
     newToDoSubmit.addEventListener('click', (e) => {
         let thisProjectIndex = e.target.parentElement.parentElement.parentElement.dataset.projectIndex
-        projectsContainer.projectsArray[thisProjectIndex].addToDo(toDoTitle.value, toDoDescription.value, toDoDate.value, toDoPriority.value);
+
+        if (!toDoTitle.value || !toDoDescription.value || !toDoDate.value || !toDoPriority.value) {
+            console.log('Bad Date Format');
+        }
+        else {
+            projectsContainer.projectsArray[thisProjectIndex].addToDo(toDoTitle.value, toDoDescription.value, toDoDate.value, toDoPriority.value);
+        }
+        
 
         console.log(projectsContainer.listAllToDos());
 
