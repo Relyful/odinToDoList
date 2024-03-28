@@ -28,9 +28,12 @@ projectContainer.projectsArray[0].listAllToDo();
 projectContainer.projectsArray[1].listAllToDo();
 ////////////////////////////////////////////////
 
-console.log(projectContainer.projectsArray[0].toDoList[0].title);
-projectContainer.projectsArray[0].toDoList[0].title = 'Kokotko';
-console.log(projectContainer.projectsArray[0].toDoList[0].title);
+console.log([projectContainer.projectsArray]);
+let stringifiedArray = JSON.stringify(projectContainer.projectsArray);
+console.log(stringifiedArray);
+let parsedArray = JSON.parse(stringifiedArray);
+console.log(parsedArray);
+// projectContainer.projectsArray = parsedArray;
 
 drawAllProjects();
 console.log(projectContainer.projectsArray[1].listAllToDo());

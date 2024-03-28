@@ -1,6 +1,5 @@
 import projectsContainer from "./projectContainer";
 import drawAllToDo from "./drawAllToDo";
-import { format } from "date-fns"; 
 
 const toDoRowButton = document.querySelector('#toDoRowButton');
 const newToDoCloseDialog = document.querySelector('#newToDoCloseDialog');
