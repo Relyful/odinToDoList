@@ -11,4 +11,11 @@ function projectsToStorage() {
     console.log(localStorage.parsedProjects);
 }
 
-export {projectsToStorage};
+function toDosToStorage() {
+    let allToDos = projectsContainer.listAllToDos();
+    localStorage.removeItem("parsedToDos");
+    localStorage.setItem("parsedToDos", JSON.stringify(allToDos));
+    console.log(localStorage.parsedToDos);
+}
+
+export {projectsToStorage, toDosToStorage};

@@ -1,4 +1,5 @@
 import toDo from './toDo.js';
+import { toDosToStorage } from './storageSaveLoad.js';
 
 export default class project {
     static projectCounter = 0;
@@ -12,6 +13,7 @@ export default class project {
         const projectIndex = this.index;
         const newToDo = new toDo(title, description, dueDate, priority, projectIndex);
         this.toDoList.push(newToDo);
+        toDosToStorage();
     }
 
     editToDo(index, title, description, dueDate, priority) {
@@ -20,10 +22,12 @@ export default class project {
         toDo.description = description;
         toDo.dueDate = dueDate;
         toDo.priority = priority;
+        toDosToStorage();
     }
 
     deleteToDo(index) {
         this.toDoList.splice(index, 1);
+        toDosToStorage();
     }
 
     listAllToDo() {

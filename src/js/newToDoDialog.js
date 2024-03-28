@@ -17,12 +17,7 @@ export default function() {
         let thisProjectIndex = e.target.parentElement.parentElement.parentElement.dataset.projectIndex
         projectsContainer.projectsArray[thisProjectIndex].addTodo(toDoTitle.value, toDoDescription.value, toDoDate.value, toDoPriority.value);
 
-        let projectsForParse = [];
-        projectsContainer.projectsArray.forEach(element => {
-            projectsForParse.push(element.name);            
-        });
-        localStorage.setItem("parsedProjects", JSON.stringify(projectsForParse));
-        console.log(localStorage.parsedProjects);
+        console.log(projectsContainer.listAllToDos());
 
         console.log(projectsContainer.projectsArray[thisProjectIndex]);
         drawAllToDo(thisProjectIndex);

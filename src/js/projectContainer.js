@@ -14,6 +14,14 @@ class allProjects {
         this.projectsArray.splice(index, 1);
         projectsToStorage();
     }
+
+    listAllToDos() {
+        let allToDos = [];
+        this.projectsArray.forEach( element => {            
+            allToDos = allToDos.concat(element.listAllToDo())
+        })
+        return allToDos;
+    }
 }
 
 let projectsContainer = new allProjects;
