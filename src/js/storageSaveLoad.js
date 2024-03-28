@@ -1,10 +1,14 @@
 import projectsContainer from "./projectContainer";
+import project from "./project";
 
 
 function projectsToStorage() {
     let projectsForParse = [];
     projectsContainer.projectsArray.forEach(element => {
-        projectsForParse.push(element.name);
+        let name = element.name;
+        let index = element.index;
+        let thisProj = {name, index};
+        projectsForParse = projectsForParse.concat(thisProj);
     });
     localStorage.removeItem("parsedProjects");
     localStorage.setItem("parsedProjects", JSON.stringify(projectsForParse));
@@ -20,10 +24,14 @@ function loadProjectsFromStorage () {
         let parsedProjects = JSON.parse(localStorage.getItem("parsedProjects"));
         localStorage.removeItem("parsedProjects");
         parsedProjects.forEach( element => {
-            projectsContainer.addProject(element);
+            if (project.projectCounter != element.index) {
+                project.projectCounter = element.index;
+            }
+            projectsContainer.addProject(element.name);
         });
         console.log('Loaded projects from localStorage :)');
     }
+    
     else {
         projectsContainer.addProject('bike');
         projectsContainer.addProject('work');
@@ -33,14 +41,15 @@ function loadProjectsFromStorage () {
 
 function loadToDosFromStorage() {
     if (localStorage.parsedToDos) {
-        let parsedToDos = JSON.parse(localStorage.getItem("parsedToDos"));        
-
+        let parsedToDos = JSON.parse(localStorage.getItem("parsedToDos"));
         parsedToDos.forEach( element => {
-            if (projectsContainer.projectsArray[element.projectIndex]) {
-                projectsContainer.projectsArray[element.projectIndex].addToDo(element.title, element.description, element.dueDate, element.priority);
+            let realIndex = projectsContainer.projectsArray.findIndex(elements => elements.index === element.projectIndex);
+            if (realIndex == -1 || !projectsContainer.projectsArray[realIndex] ) {
+                console.log('Lost ToDo Cleared ' + projectsContainer.projectsArray[realIndex]);
+                console.log({realIndex});
             }
             else {
-                console.log('Lost ToDo Cleared');
+                projectsContainer.projectsArray[realIndex].addToDo(element.title, element.description, element.dueDate, element.priority);
             }            
         })
         console.log('Loaded todos from localStorage :)');
