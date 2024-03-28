@@ -9,7 +9,7 @@ export default class project {
         this.index = project.projectCounter++;
     }
 
-    addTodo(title, description, dueDate, priority) {
+    addToDo(title, description, dueDate, priority) {
         const projectIndex = this.index;
         const newToDo = new toDo(title, description, dueDate, priority, projectIndex);
         this.toDoList.push(newToDo);

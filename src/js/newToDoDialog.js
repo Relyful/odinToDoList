@@ -15,7 +15,7 @@ export default function() {
     
     newToDoSubmit.addEventListener('click', (e) => {
         let thisProjectIndex = e.target.parentElement.parentElement.parentElement.dataset.projectIndex
-        projectsContainer.projectsArray[thisProjectIndex].addTodo(toDoTitle.value, toDoDescription.value, toDoDate.value, toDoPriority.value);
+        projectsContainer.projectsArray[thisProjectIndex].addToDo(toDoTitle.value, toDoDescription.value, toDoDate.value, toDoPriority.value);
 
         console.log(projectsContainer.listAllToDos());
 
