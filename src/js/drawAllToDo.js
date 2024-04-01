@@ -23,7 +23,6 @@ export default function drawAllToDo(projectIndex) {
     addNewButton.appendChild(addNewImage);
     addNewButton.addEventListener('click', (e) => {
         newToDoForm.reset();
-        console.log(projectIndex);
         newToDo.dataset.projectIndex = projectIndex;
         let submitButton = document.createElement('button');
         submitButton.textContent = 'Submit';
@@ -53,7 +52,6 @@ export default function drawAllToDo(projectIndex) {
             newToDoForm.reset();
             toDoTitle.value = element.title;
             toDoDescription.value = element.description;
-            console.log(element.description);
             toDoDate.value = element.dueDate;
             toDoPriority.value = element.priority;
 

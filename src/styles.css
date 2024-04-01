@@ -58,6 +58,7 @@ nav {
 }
 
 .projectButton, .deleteProjectButton, #newProjButt {
+    transition: box-shadow .3s;
     margin: 0;
     border: none;
     background-color: white;
@@ -134,6 +135,7 @@ main {
 }
 
 .newTodoButton {
+    transition: box-shadow .3s;
     border: solid 1px black;
     height: 13rem;
     border-radius: 1rem;
@@ -149,11 +151,12 @@ main {
     height: 50%;
 }
 
-dialog#newProject::backdrop {
+dialog#newProject::backdrop, dialog#newToDo::backdrop {
     background-color: rgba(77, 77, 77, 0.623);
 }
 
 .toDoCard {
+    transition: box-shadow .3s;
     padding: 0.5rem;
     height: 13rem;
     border-radius: 1rem;

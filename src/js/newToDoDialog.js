@@ -23,10 +23,6 @@ export default function() {
             projectsContainer.projectsArray[thisProjectIndex].addToDo(toDoTitle.value, toDoDescription.value, toDoDate.value, toDoPriority.value);
         }
         
-
-        console.log(projectsContainer.listAllToDos());
-
-        console.log(projectsContainer.projectsArray[thisProjectIndex]);
         drawAllToDo(thisProjectIndex);
         newToDoForm.reset();
         newToDoDialog.close();
