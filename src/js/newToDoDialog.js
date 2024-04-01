@@ -16,7 +16,7 @@ export default function() {
     newToDoSubmit.addEventListener('click', (e) => {
         let thisProjectIndex = e.target.parentElement.parentElement.parentElement.dataset.projectIndex
 
-        if (!toDoTitle.value || !toDoDescription.value || !toDoDate.value || !toDoPriority.value) {
+        if (!toDoTitle.value || !toDoDate.value || !toDoPriority.value) {
             console.log('Bad Date Format');
         }
         else {
