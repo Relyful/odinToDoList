@@ -4,6 +4,9 @@ import drawAllToDo from './js/drawAllToDo.js';
 import newProjDialog from './js/newProjDialog.js';
 import { loadProjectsFromStorage, loadToDosFromStorage } from './js/storageSaveLoad.js';
 
+
+sessionStorage.setItem("lastClickedProj", "0");
+
 newProjDialog();
 
 loadProjectsFromStorage();

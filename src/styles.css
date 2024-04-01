@@ -9,7 +9,7 @@
 }
 
 .container > * {
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.11);
 }
 
 .container {
@@ -23,6 +23,7 @@
 }
 
 header {
+    background-color: #C4DFDF;
     grid-column: 1 / 3;
     
     display: flex;
@@ -32,11 +33,16 @@ header {
 }
 
 nav {
+    background-color: #D2E9E9;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
     font-size: 18px;
+}
+
+.navRow {
+    margin: 6px 0 6px 0;
 }
 
 .projectsHeaderDiv {
@@ -55,21 +61,26 @@ nav {
     display: flex;
     justify-content: space-between;
     height: 3rem;
+    background-color: #D2E9E9;
 }
 
 .projectButton, .deleteProjectButton, #newProjButt {
+    background-color: transparent;
     transition: box-shadow .3s;
     margin: 0;
     border: none;
-    background-color: white;
     font-family: inherit;
     font-size: inherit;
     cursor: pointer;
 }
 
-.projectButton:hover, .deleteProjectButton:hover, #newProjButt:hover, .newTodoButton:hover, .toDoCard:hover {
-    box-shadow: 0 0 11px rgba(33,33,33,.2);
-    z-index: 1;
+.activeButt {
+    background-color: #b0dfdf;
+}
+
+.navRow:hover, .deleteProjectButton:hover, #newProjButt:hover, .newTodoButton:hover, .toDoCard:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.411);
+    z-index: 2;
 }
 
 .projectsHeader, .projectButton, .deleteProjectButton, #newProjButt {
@@ -83,12 +94,17 @@ nav {
 }
 
 main {
+    background-color: #E3F4F4;
     padding: 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, 20rem);
     grid-template-rows: 13rem;
     grid-auto-rows: 13rem;
     gap: 2rem;
+}
+
+dialog {
+    border-radius: 20px;
 }
 
 #newProject {
@@ -135,12 +151,6 @@ main {
 }
 
 .newTodoButton {
-    transition: box-shadow .3s;
-    border: solid 1px black;
-    height: 13rem;
-    border-radius: 1rem;
-    cursor: pointer;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,14 +165,17 @@ dialog#newProject::backdrop, dialog#newToDo::backdrop {
     background-color: rgba(77, 77, 77, 0.623);
 }
 
-.toDoCard {
+.newTodoButton, .toDoCard {
+    background-color: #F8F6F4;
     transition: box-shadow .3s;
-    padding: 0.5rem;
+    border: solid black 1px;
     height: 13rem;
     border-radius: 1rem;
-    border: solid black 1px;
     cursor: pointer;
+}
 
+.toDoCard {
+    padding: 0.5rem;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 4fr 2fr;
