@@ -105,6 +105,8 @@ main {
 
 dialog {
     border-radius: 20px;
+    background-color: #F8F6F4;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #newProject {
@@ -119,6 +121,10 @@ dialog {
     position: absolute;
     top: 5%;
     left: 90%;
+    background-color: transparent;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
 }
 
 #newToDo {
@@ -149,6 +155,17 @@ dialog {
     margin-left: 15%;
     padding: 7px;
 }
+
+#toDoFormSubmit, #toDoEditFormSubmit, #deleteToDoButton, .newProjSubmit {
+    background-color: transparent;
+    border: solid 1px black;
+}
+
+#toDoEditFormSubmit, #deleteToDoButton, .newProjSubmit {
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
 
 .newTodoButton {
     display: flex;

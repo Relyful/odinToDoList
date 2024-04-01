@@ -33,8 +33,8 @@ function loadProjectsFromStorage () {
     }
     
     else {
-        projectsContainer.addProject('bike');
-        projectsContainer.addProject('work');
+        projectsContainer.addProject('Work');
+        projectsContainer.addProject('Programming');
         console.log('Loaded as new :)');
     }
 }
@@ -55,9 +55,10 @@ function loadToDosFromStorage() {
         console.log('Loaded todos from localStorage :)');
     }
     else {
-        projectsContainer.projectsArray[0].addToDo('Marek', 'Co ti povim?2', '0', '2');
-        projectsContainer.projectsArray[1].addToDo('Fabo', 'Co ti nepovim?', '0', '2');
-        projectsContainer.projectsArray[1].addToDo('Sven', 'Co ti nepovim?', '0', '3');
+        projectsContainer.projectsArray[0].addToDo('Send all items to service centre', 'ASAP', '2024-04-17', '2');
+        projectsContainer.projectsArray[0].addToDo('Quarterly Inspection', '420', '2024-04-20', '3');
+        projectsContainer.projectsArray[1].addToDo('Learn ES Ling', '', '2024-04-09', '2');
+        projectsContainer.projectsArray[1].addToDo('Learn React', 'None', '2024-06-30', '3');
         console.log('Loaded as new :)');
     }
 }
