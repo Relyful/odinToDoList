@@ -35,11 +35,50 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
+    font-size: 18px;
 }
 
-nav button {
-    padding: 10px;
-    margin: 5px;
+.projectsHeaderDiv {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.navContainer, .projectsHeaderDiv {
+    width: 100%;    
+
+}
+
+.projectsHeaderDiv, .navRow {
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+}
+
+.projectButton, .deleteProjectButton, #newProjButt {
+    margin: 0;
+    border: none;
+    background-color: white;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+.projectButton:hover, .deleteProjectButton:hover, #newProjButt:hover, .newTodoButton:hover, .toDoCard:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+    z-index: 1;
+}
+
+.projectsHeader, .projectButton, .deleteProjectButton, #newProjButt {
+    padding: 0.5rem;
+    border-radius: 6px;
+}
+
+.projectButton {
+    flex: 1;
+    text-align: start;
 }
 
 main {
