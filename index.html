@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Relyful's ToDo List</h1>
+        </header>
+        <nav>
+            <button type="button" id="newProjButt">Create New Project</button>
+            <div class="navContainer"></div>
+        </nav>
+        <main>
+
+        </main>
+    </div>
+    <dialog id="newProject">
+        <form action="#" id="newProjForm">
+            <div class="newProjectRow">
+                <label for="proTitle">Projec Title: </label>
+                <input type="text" name="proTitle" id="proTitle">
+            </div>
+            <button type="button">Submit</button>
+            <button type="button" id="newProjCloseDialog">❌</button>
+        </form>
+    </dialog>
+    <dialog id="newToDo">
+        <form action="#" id="newToDoForm">
+            <div class="toDoRow">
+                <label for="toDoTitle">Title: </label>
+                <input type="text" name="toDoTitle" id="toDoTitle">
+            </div>
+            <div class="toDoRow">
+                <label for="toDoDescription">Description: </label>
+                <textarea name="toDoDescription" id="toDoDescription" cols="30" rows="5"></textarea>
+            </div>
+            <div class="toDoRow">
+                <label for="toDoDate">Date due: </label>
+                <input type="date" name="toDoDate" id="toDoDate">
+            </div>
+            <div class="toDoRow">
+                <label for="toDoPriority">Priority: </label>
+                <select name="toDoPriority" id="toDoPriority">
+                    <option selected disabled hidden value="0">None</option>
+                    <option value="1">Low</option>
+                    <option value="2">Medium</option>
+                    <option value="3">High</option>
+                </select>
+            </div>
+            <div id="toDoRowButton" class="toDoRow">
+            </div>
+            <button type="button" id="newToDoCloseDialog">❌</button>
+        </form>
+    </dialog>
+<script defer src="main.js"></script></body>
+</html>
