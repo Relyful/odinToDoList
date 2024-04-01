@@ -11,7 +11,10 @@
             <h1>Relyful's ToDo List</h1>
         </header>
         <nav>
-            <button type="button" id="newProjButt">Create New Project</button>
+            <div class="projectsHeaderDiv">
+                <div class="projectsHeader">Projects</div>
+                <button type="button" id="newProjButt">➕</button>
+            </div>
             <div class="navContainer"></div>
         </nav>
         <main>
@@ -24,7 +27,7 @@
                 <label for="proTitle">Projec Title: </label>
                 <input type="text" name="proTitle" id="proTitle">
             </div>
-            <button type="button">Submit</button>
+            <button class="newProjSubmit" type="button">Submit</button>
             <button type="button" id="newProjCloseDialog">❌</button>
         </form>
     </dialog>
