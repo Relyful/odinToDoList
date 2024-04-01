@@ -37,7 +37,7 @@ export default function drawAllToDo(projectIndex) {
     
 
     projectsContainer.projectsArray[projectIndex].listAllToDo().forEach(element => {
-        let formatDate = format(new Date(element.dueDate), "dd-MM-yyyy");
+        let formatDate = format(new Date(element.dueDate), "dd.MM.yyyy");
         const newCard = document.createElement('div');        
         newCard.dataset.toDoIndex = element.index;        
         newCard.classList.add('toDoCard');
